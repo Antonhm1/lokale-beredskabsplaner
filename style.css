@@ -1,0 +1,99 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* ── Header ── */
+
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 24px 40px;
+  background: #fff;
+}
+
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  text-decoration: none;
+}
+
+.logo span {
+  display: block;
+  background: #ff0d0d;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 5px;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 0;
+}
+
+nav a {
+  background: #ff0d0d;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 3px 6px;
+}
+
+nav a:hover,
+nav a.active {
+  background: #7c0404;
+}
+
+/* ── Placeholder grid ── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px;
+}
+
+.placeholder {
+  background: #f2f2f2;
+  aspect-ratio: 4 / 3;
+}
+
+.placeholder--wide {
+  grid-column: span 2;
+  aspect-ratio: 16 / 7;
+}
+
+.placeholder--tall {
+  aspect-ratio: 3 / 4;
+}
+
+.placeholder--video {
+  aspect-ratio: 16 / 9;
+}
+
+.placeholder--square {
+  aspect-ratio: 1;
+}
+
+.placeholder--doc {
+  aspect-ratio: 1 / 1.414;
+}
