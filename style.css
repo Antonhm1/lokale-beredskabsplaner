@@ -192,9 +192,6 @@ nav a.active {
   letter-spacing: 0.01em;
   line-height: 1.2;
   margin-bottom: 28px;
-  padding-bottom: 4px;
-  border-bottom: 4px solid #ff0d0d;
-  display: inline-block;
 }
 
 .event-description p {
@@ -208,7 +205,7 @@ nav a.active {
 /* ── Program section ── */
 
 .event-program {
-  background: #f0f0f0;
+  background: #e8e8e8;
   color: #111;
   padding: 80px 40px;
 }
@@ -238,19 +235,20 @@ nav a.active {
 }
 
 .program-card {
-  border: 2px solid #ff0d0d;
   background: #fff;
-  padding: 32px;
+  padding: 32px 32px 32px 36px;
   position: relative;
+  border-left: 5px solid #ff0d0d;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .program-number {
   display: block;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 900;
   color: #ff0d0d;
   line-height: 1;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .program-card h3 {
@@ -279,9 +277,6 @@ nav a.active {
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 28px;
-  padding-bottom: 4px;
-  border-bottom: 4px solid #ff0d0d;
-  display: inline-block;
 }
 
 .event-audience p {
