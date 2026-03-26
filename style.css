@@ -17,7 +17,10 @@ header {
   align-items: flex-end;
   justify-content: space-between;
   padding: 24px 40px;
-  background: #fff;
+  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
@@ -143,7 +146,7 @@ nav a.active {
 .event-hero {
   text-align: center;
   padding: 100px 40px;
-  background: #0C2752;
+  background: #E6883B;
   color: #fff;
   margin-bottom: 0;
 }
@@ -246,7 +249,7 @@ nav a.active {
   display: block;
   font-size: 3.5rem;
   font-weight: 900;
-  color: #E6883B;
+  color: #0C2752;
   line-height: 1;
   margin-bottom: 14px;
 }
