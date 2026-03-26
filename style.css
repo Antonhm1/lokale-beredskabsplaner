@@ -321,3 +321,121 @@ nav a.active {
   background: #fff;
   color: #E6883B;
 }
+
+/* ── Mobile ── */
+
+@media (max-width: 640px) {
+  header {
+    padding: 16px 20px;
+    align-items: center;
+  }
+
+  .logo span {
+    font-size: 1rem;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 0.75rem;
+    padding: 2px 5px;
+  }
+
+  .event-hero {
+    padding: 60px 20px;
+  }
+
+  .event-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .event-date {
+    font-size: 1.1rem;
+  }
+
+  .event-label {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+  }
+
+  .event-description {
+    padding: 48px 20px 40px;
+    font-size: 1rem;
+  }
+
+  .event-description h2 {
+    font-size: 1.5rem;
+  }
+
+  .event-program {
+    padding: 48px 20px;
+  }
+
+  .event-program h2 {
+    font-size: 1.6rem;
+  }
+
+  .program-intro {
+    font-size: 1rem;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .program-card {
+    padding: 24px 24px 24px 28px;
+  }
+
+  .program-number {
+    font-size: 2.5rem;
+  }
+
+  .event-audience {
+    padding: 48px 20px 32px;
+  }
+
+  .event-audience h2 {
+    font-size: 1.5rem;
+  }
+
+  .event-audience p {
+    font-size: 1rem;
+  }
+
+  .audience-highlight {
+    font-size: 1.15rem !important;
+  }
+
+  .event-cta {
+    padding: 32px 20px 60px;
+  }
+
+  .btn-signup {
+    font-size: 1rem;
+    padding: 16px 32px;
+  }
+
+  .page-content {
+    padding: 24px 20px;
+  }
+
+  .page-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .placeholder--wide {
+    grid-column: span 1;
+  }
+}
