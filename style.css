@@ -322,6 +322,26 @@ nav a.active {
   color: #E6883B;
 }
 
+/* ── Footer ── */
+
+.site-footer {
+  padding: 60px 40px;
+  border-top: 2px solid #e8e8e8;
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 80px;
+  width: auto;
+}
+
 /* ── Mobile ── */
 
 @media (max-width: 640px) {
@@ -419,6 +439,18 @@ nav a.active {
   .btn-signup {
     font-size: 1rem;
     padding: 16px 32px;
+  }
+
+  .site-footer {
+    padding: 40px 20px;
+  }
+
+  .footer-logos {
+    gap: 32px;
+  }
+
+  .footer-logos img {
+    height: 56px;
   }
 
   .page-content {
