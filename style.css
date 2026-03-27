@@ -178,6 +178,33 @@ nav a.active {
   text-transform: uppercase;
 }
 
+.event-time {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.event-signup-link {
+  display: inline-block;
+  margin-top: 24px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #fff;
+  background: #0C2752;
+  padding: 14px 36px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 3px solid #0C2752;
+  transition: all 0.15s ease;
+}
+
+.event-signup-link:hover {
+  background: #E6883B;
+  color: #fff;
+  border-color: #fff;
+}
+
 /* ── Description section ── */
 
 .event-description {
