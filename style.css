@@ -315,20 +315,110 @@ nav a.active {
   margin-bottom: 20px;
 }
 
-.audience-highlight {
-  font-size: 1.4rem !important;
+/* ── Description intro & inline CTA ── */
+
+.event-description-intro {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.event-description .btn-signup {
+  background: #0C2752;
+  border-color: #0C2752;
+  margin-bottom: 48px;
+}
+
+.event-description .btn-signup:hover {
+  background: #fff;
+  color: #0C2752;
+}
+
+.event-description h3 {
+  font-size: 1.5rem;
   font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+
+/* ── Audience list ── */
+
+.audience-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.audience-list li {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  padding-left: 20px;
+  position: relative;
+}
+
+.audience-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
   color: #E6883B;
-  line-height: 1.5 !important;
-  margin-top: 12px;
+  font-weight: 900;
+}
+
+/* ── Practical info section ── */
+
+.event-practical {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 40px 40px 60px;
+}
+
+.event-practical h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.practical-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.practical-list li {
+  font-size: 1.15rem;
+  line-height: 2;
+}
+
+.practical-cta-text {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+/* ── Quote section ── */
+
+.event-quote {
+  text-align: center;
+  padding: 80px 40px;
+  background: #0C2752;
+  color: #fff;
+}
+
+.event-quote blockquote {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.4;
 }
 
 /* ── CTA section ── */
-
-.event-cta {
-  text-align: center;
-  padding: 40px 40px 100px;
-}
 
 .btn-signup {
   display: inline-block;
@@ -455,12 +545,36 @@ nav a.active {
     font-size: 1rem;
   }
 
-  .audience-highlight {
-    font-size: 1.15rem !important;
+  .event-description-intro {
+    font-size: 1.15rem;
   }
 
-  .event-cta {
-    padding: 32px 20px 60px;
+  .event-description h3 {
+    font-size: 1.2rem;
+  }
+
+  .audience-list li {
+    font-size: 1rem;
+  }
+
+  .event-practical {
+    padding: 32px 20px 48px;
+  }
+
+  .event-practical h2 {
+    font-size: 1.5rem;
+  }
+
+  .practical-list li {
+    font-size: 1rem;
+  }
+
+  .event-quote {
+    padding: 48px 20px;
+  }
+
+  .event-quote blockquote {
+    font-size: 1.3rem;
   }
 
   .btn-signup {
