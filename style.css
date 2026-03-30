@@ -294,26 +294,7 @@ nav a.active {
   line-height: 1.6;
 }
 
-/* ── Audience section ── */
-
-.event-audience {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 80px 40px 40px;
-}
-
-.event-audience h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-}
-
-.event-audience p {
-  font-size: 1.15rem;
-  line-height: 1.85;
-  margin-bottom: 20px;
-}
+/* ── Audience list ── */
 
 /* ── Description intro & inline CTA ── */
 
@@ -367,21 +348,6 @@ nav a.active {
   font-weight: 900;
 }
 
-/* ── Practical info section ── */
-
-.event-practical {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 40px 40px 60px;
-}
-
-.event-practical h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-}
-
 .practical-list {
   list-style: none;
   padding: 0;
@@ -398,6 +364,77 @@ nav a.active {
   font-weight: 900;
   margin-bottom: 16px;
   margin-top: 8px;
+}
+
+/* ── Video + Info row ── */
+
+.video-info-row {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 8vw;
+}
+
+.video-info-video {
+  flex: 1 1 50%;
+}
+
+.video-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-info-video video {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-info-text {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.video-info-text h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.video-info-text > p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.video-info-text h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 28px;
+  margin-bottom: 12px;
 }
 
 /* ── Quote section ── */
@@ -553,16 +590,29 @@ nav a.active {
     font-size: 1.2rem;
   }
 
+  .video-info-row {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 32px;
+  }
+
+  .video-info-video {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .video-info-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .video-info-text h3 {
+    font-size: 1.2rem;
+  }
+
   .audience-list li {
     font-size: 1rem;
-  }
-
-  .event-practical {
-    padding: 32px 20px 48px;
-  }
-
-  .event-practical h2 {
-    font-size: 1.5rem;
   }
 
   .practical-list li {

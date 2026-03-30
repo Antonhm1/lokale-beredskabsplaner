@@ -105,7 +105,20 @@
       </div>
     </section>
 
-    <section class="event-audience">
+  </main>
+
+  <section class="video-info-row">
+    <div class="video-info-video">
+      <div class="video-wrapper">
+        <video playsinline preload="metadata" poster="">
+          <source src="video/naar-lyset-gaar.mp4" type="video/mp4">
+        </video>
+        <button class="play-btn" aria-label="Afspil video">
+          <svg viewBox="0 0 80 80" width="80" height="80"><circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/><polygon points="32,24 32,56 58,40" fill="#fff"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="video-info-text">
       <h2>Hvem kan deltage?</h2>
       <p>Dette møde er for dig, der vil gøre en forskel for trygheden i dit nærområde. Du behøver ingen forkundskaber – kun lysten til at være med til at skabe et mere robust lokalsamfund. Vi henvender os bredt til:</p>
       <ul class="audience-list">
@@ -115,10 +128,8 @@
         <li>Grønne Nabofællesskaber og nabohjælps-grupper</li>
         <li>Ildsjæle, der bare gerne vil i gang, men mangler metoden</li>
       </ul>
-    </section>
 
-    <section class="event-practical">
-      <h2>Praktisk information</h2>
+      <h3>Praktisk information</h3>
       <ul class="practical-list">
         <li><strong>Format:</strong> Online (du modtager et link tre dage før)</li>
         <li><strong>Varighed:</strong> 1,5 time med masser af inspiration og konkrete værktøjer</li>
@@ -126,13 +137,12 @@
       </ul>
       <p class="practical-cta-text">Ja tak, jeg vil gerne sikre mit lokalsamfund</p>
       <a href="https://deltagelse.nemtilmeld.dk/123/" class="btn-signup">Tilmeld dig her</a>
-    </section>
+    </div>
+  </section>
 
-    <section class="event-quote">
-      <blockquote>"Når lyset slukkes er det fællesskabet der får det tændt igen"</blockquote>
-    </section>
-
-  </main>
+  <section class="event-quote">
+    <blockquote>"Når lyset slukkes er det fællesskabet der får det tændt igen"</blockquote>
+  </section>
 
   <footer class="site-footer">
     <div class="footer-logos">
@@ -141,6 +151,21 @@
       <img src="img/image.png" alt="Landsby Højskolen">
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+      const video = wrapper.querySelector('video');
+      const btn = wrapper.querySelector('.play-btn');
+      function play() {
+        video.controls = true;
+        video.play();
+        btn.classList.add('hidden');
+      }
+      btn.addEventListener('click', play);
+      video.addEventListener('pause', () => btn.classList.remove('hidden'));
+      video.addEventListener('play', () => btn.classList.add('hidden'));
+    });
+  </script>
 
 </body>
 </html>
