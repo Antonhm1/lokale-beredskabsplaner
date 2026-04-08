@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lokaltberedskab.dk/sitemap.xml
+Sitemap: https://lokalt-beredskab.dk/sitemap.xml
