@@ -543,6 +543,45 @@ nav a.active {
   border-top: 2px solid #e8e8e8;
 }
 
+/* ── Share event ── */
+
+.share-event {
+  margin-top: 28px;
+}
+
+.share-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.share-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.share-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.share-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
 .footer-logos {
   display: flex;
   align-items: center;
@@ -718,6 +757,16 @@ nav a.active {
 
   .site-footer {
     padding: 40px 20px;
+  }
+
+  .share-links a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .share-links a svg {
+    width: 20px;
+    height: 20px;
   }
 
   .footer-logos {
