@@ -665,6 +665,19 @@ nav a.active {
   color: #444;
 }
 
+.pdf-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0C2752;
+  font-weight: 600;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.pdf-link:hover {
+  color: #E87722;
+}
+
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -760,6 +773,48 @@ nav a.active {
   color: #666;
   text-align: center;
   border-radius: 8px;
+}
+
+.blog-slides {
+  margin: 40px 0 32px;
+}
+
+.blog-slides h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0C2752;
+  margin-bottom: 16px;
+}
+
+.slides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.slides-grid a {
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  transition: box-shadow 0.2s;
+}
+
+.slides-grid a:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+
+.slides-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .slides-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
 }
 
 .blog-back-link {
