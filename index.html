@@ -151,6 +151,7 @@
   }
   </script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
@@ -403,6 +404,14 @@
     <blockquote>"Når lyset slukkes er det fællesskabet der får det tændt igen"</blockquote>
   </section>
 
+  <section class="map-section" id="kort">
+    <div class="map-inner">
+      <h2>Landsbyer med beredskabsplaner</h2>
+      <p class="map-intro">Klik på en markering for at se landsbyens beredskabsplan.</p>
+    </div>
+    <div id="denmark-map"></div>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-logos">
       <a href="https://gnf.green/" target="_blank" rel="noopener noreferrer"><img src="img/Tyge Mortensen (2).jpeg" alt="Grønne Nabofællesskaber" loading="lazy"></a>
@@ -414,5 +423,56 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('denmark-map', {
+      center: [56.0, 10.8],
+      zoom: 7,
+      scrollWheelZoom: false
+    });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> bidragydere &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    var villages = [
+      {
+        name: 'Rudme',
+        description: 'Rudme på Fyn – færdig beredskabsplan med klyngeledere og fælles køkkenvogn.',
+        lat: 55.197,
+        lng: 10.454,
+        url: 'blog/video-11-rudme.html'
+      }
+    ];
+
+    villages.forEach(function(v) {
+      var marker = L.circleMarker([v.lat, v.lng], {
+        radius: 11,
+        fillColor: '#E6883B',
+        color: '#0C2752',
+        weight: 2.5,
+        opacity: 1,
+        fillOpacity: 1
+      }).addTo(map);
+
+      marker.bindTooltip(v.name, {
+        permanent: true,
+        direction: 'right',
+        className: 'village-tooltip'
+      });
+
+      marker.on('click', function() {
+        window.location.href = v.url;
+      });
+
+      marker.getElement && marker.on('add', function() {
+        if (marker.getElement()) {
+          marker.getElement().style.cursor = 'pointer';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
