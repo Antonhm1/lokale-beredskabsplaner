@@ -888,9 +888,26 @@ nav a.active {
   }
 }
 
-.blog-back-link {
+.pdf-download-btn {
   display: inline-block;
   margin-top: 32px;
+  background: #0C2752;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.pdf-download-btn:hover {
+  background: #E6883B;
+}
+
+.blog-back-link {
+  display: block;
+  margin-top: 24px;
   color: #0C2752;
   font-weight: 700;
   text-decoration: none;
@@ -1039,6 +1056,127 @@ nav a.active {
   font-size: 0.9rem;
   color: rgba(255,255,255,0.7);
   line-height: 1.4;
+}
+
+/* ── Drejebog-section ── */
+
+.drejebog-section {
+  background: #FDF6EE;
+  padding: 72px 40px;
+  text-align: center;
+}
+
+.drejebog-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.drejebog-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.drejebog-section h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #0C2752;
+  margin-bottom: 16px;
+}
+
+.drejebog-section p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+.drejebog-download-btn {
+  display: inline-block;
+  background: #E6883B;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.drejebog-download-btn:hover {
+  background: #0C2752;
+}
+
+/* ── Om-section ── */
+
+.om-section {
+  background: #f4f6fa;
+  padding: 80px 40px;
+}
+
+.om-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.om-section h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #0C2752;
+  margin-bottom: 48px;
+}
+
+.om-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.om-photo-wrap {
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 16 / 7;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.om-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 80%;
+  display: block;
+}
+
+.om-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.om-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .om-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .om-section {
+    padding: 48px 20px;
+  }
+
+  .om-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
 }
 
 /* ── Footer ── */
@@ -1412,6 +1550,14 @@ nav a.active {
 }
 
 @media (max-width: 640px) {
+  .drejebog-section {
+    padding: 48px 20px;
+  }
+
+  .drejebog-section h2 {
+    font-size: 1.5rem;
+  }
+
   .samsik-section {
     padding: 60px 20px;
   }
