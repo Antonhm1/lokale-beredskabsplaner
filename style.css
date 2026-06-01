@@ -1272,6 +1272,12 @@ nav a.active {
   align-items: start;
 }
 
+.om-left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
 .om-photo-wrap {
   overflow: hidden;
   border-radius: 10px;
@@ -1285,6 +1291,24 @@ nav a.active {
   object-fit: cover;
   object-position: center 80%;
   display: block;
+}
+
+.om-team h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.om-team p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.om-team p:last-child {
+  margin-bottom: 0;
 }
 
 .om-text h3 {
