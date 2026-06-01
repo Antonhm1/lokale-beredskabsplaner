@@ -157,10 +157,14 @@
 
   <header>
     <a class="logo" href="index.html"><img src="img/logos/lokalt-beredskab-icon.png" alt="Lokalt Beredskab logo"><span class="logo-text">Lokalt<br>Beredskab</span></a>
+    <button class="burger" aria-label="Åbn menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <nav>
       <a href="index.html" class="active">Hjem</a>
       <a href="#beredskabsplaner">Planer</a>
       <a href="#videoer">Videoer</a>
+      <a href="#ekstremvejr">Ekstremvejr</a>
       <a href="#om">Om</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
@@ -326,7 +330,8 @@
   <section class="video-section" id="videoer">
     <h2>Videoer fra inspirationsmødet</h2>
     <p class="video-intro">11 korte oplæg fra det første online inspirationsmøde 27. april 2026. <a class="pdf-link" href="Online Meeting April 27 2026.pdf" target="_blank" rel="noopener noreferrer">Download alle slides som PDF</a></p>
-    <div class="video-grid">
+    <button class="video-toggle-btn" id="video-toggle-inspirationsmoede" aria-expanded="false" aria-controls="video-grid-inspirationsmoede">Vis alle 11 videoer ↓</button>
+    <div class="video-grid" id="video-grid-inspirationsmoede">
 
       <a class="video-card" href="blog/video-11-rudme.html">
         <img class="video-thumb" src="https://img.youtube.com/vi/y_J-gkm_lk0/hqdefault.jpg" alt="Rudme – når en landsby går hele vejen" loading="lazy">
@@ -463,6 +468,41 @@
         <p class="video-subtitle">Grundejerforening nord for København med lokal beredskabsplan og egen hjemmeside.</p>
       </a>
 
+      <a class="video-card" href="blog/smoel-broager.html">
+        <img class="video-thumb" src="img/BLB Sandsække GNF Newsletter.png" alt="Smøl, Broager – lokal beredskabsplan" loading="lazy" style="object-position: center 30%;">
+        <h3 class="video-title">Smøl, Broager</h3>
+        <p class="video-subtitle">Landsby på Broagerland i Sønderborg Kommune – Årets Landsby 2025 med lokal beredskabsplan.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="klimaatlas-section" id="ekstremvejr">
+    <div class="klimaatlas-inner">
+      <p class="klimaatlas-tag">Ekstremvejr &amp; klimatilpasning</p>
+      <h2>Hvad siger klimaet om dit lokalsamfund?</h2>
+      <p class="klimaatlas-intro">Ekstrem varme, skybrud, stormflod og kraftig vind er ikke undtagelser – de er fremtidens virkelighed. Et stærkt lokalt beredskab starter med at forstå, hvad klimaet bringer til netop dit område.</p>
+
+      <div class="klimaatlas-layout">
+        <div class="klimaatlas-video-block">
+          <video controls preload="none" poster="img/klimaatlas-thumb.jpg" class="klimaatlas-video">
+            <source src="video/Introduction to Klimaatlas.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="klimaatlas-text">
+          <h3>DMI Klimaatlas</h3>
+          <p>DMI's Klimaatlas samler klimafremskrivninger frem til 2100 for alle danske kommuner. Det giver jer et konkret overblik over, hvad I lokalt kan forvente af:</p>
+          <ul class="klimaatlas-list">
+            <li><strong>Skybrud og ekstrem regn</strong> – hyppighed og mængde øges</li>
+            <li><strong>Hedebølger og varme dage</strong> – længere og kraftigere perioder</li>
+            <li><strong>Stormflod og havstigning</strong> – op til 30–50 cm frem mod 2100</li>
+            <li><strong>Frost og vinter</strong> – færre frostdage, men stadig risiko</li>
+          </ul>
+          <p>Brug Klimaatlas som grundlag, når I kortlægger sårbare steder og scenarier i jeres lokale beredskabsplan.</p>
+          <a class="klimaatlas-cta" href="https://www.dmi.dk/klimaatlas" target="_blank" rel="noopener noreferrer">Udforsk DMI Klimaatlas &rarr;</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -502,6 +542,11 @@
           <p>Styrelsen for Samfundssikkerhed har givet støtte til et forsøgsprojekt, der skal afprøve en metode til udvikling af en lokal beredskabsplan og mobilisering af et lokalsamfund om det. Den skal kunne understøtte tryghed og handlekraft før, under og efter kriser.</p>
           <p>Med dette projekt vil Grønne Nabofællesskaber – i samarbejde med Landsbyhøjskolen ved Tyge Mortensen – udvikle og afvikle en række borgervendte kurser efterfuldt af en faciliteret beredskabsproces, der styrker lokalsamfunds evne til at håndtere kriser gennem viden, samarbejde og fælles mobilisering.</p>
           <p>Projektet tager direkte afsæt i Styrelsen for Samfundssikkerheds anbefalinger i <em>Forberedt på kriser</em> og specielt vejledningen <em>Lokalt beredskab for beboerforeninger m.v.</em></p>
+          <h3>Teamet bag</h3>
+          <p><strong>Tyge Mortensen</strong> er projektleder på initiativet Lokalt Beredskab og en central drivkraft bag udviklingen af projektet. Han arbejder med at styrke lokale fællesskabers evne til at stå sammen og handle i både hverdag og krisesituationer.</p>
+          <p>Med baggrund som fremtidsforsker og facilitator af lokale processer har Tyge særligt fokus på, hvordan fællesskab, handlekraft og lokalt engagement kan omsættes til konkrete løsninger. Han er initiativtager til Landsbyhøjskolen, hvor læring, fællesskab og lokal udvikling går hånd i hånd. I projektet bidrager Tyge med sin store erfaring og arbejder for at skabe engagement i lokalsamfundet om at opbygge et stærkt og handlingsorienteret beredskab.</p>
+          <p><strong>Marianne Norup</strong> er projektmedarbejder for Grønne Nabofællesskaber og arbejder med at styrke lokale fællesskaber gennem bæredygtige initiativer og konkret handling. I projektet om lokalt beredskab bidrager hun med at skabe engagement, overblik og fremdrift i de lokale processer – med fokus på, hvordan nabofællesskaber kan spille en aktiv rolle i at øge robusthed og sammenhængskraft.</p>
+          <p>Marianne har erfaring med at facilitere samarbejde og omsætte gode idéer til praksis, så flere kan være med – både der hvor man er i gang og hvor man skal til at tage de første skridt. Hun er optaget af at gøre det enkelt og meningsfuldt at bidrage lokalt, så fællesskabet bliver en styrke i både hverdagen og i krisesituationer.</p>
         </div>
       </div>
     </div>
@@ -517,6 +562,35 @@
       <a href="#" target="_blank" rel="noopener noreferrer"><img src="img/Folkekirken Logo.jpg" alt="Folkekirken" loading="lazy"></a>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var MOBILE_BREAKPOINT = 640;
+      var grid = document.getElementById('video-grid-inspirationsmoede');
+      var btn = document.getElementById('video-toggle-inspirationsmoede');
+      if (!grid || !btn) return;
+
+      function initMobileCollapse() {
+        if (window.innerWidth <= MOBILE_BREAKPOINT) {
+          grid.classList.add('video-grid--collapsed');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.textContent = 'Vis alle 11 videoer ↓';
+        } else {
+          grid.classList.remove('video-grid--collapsed');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      btn.addEventListener('click', function () {
+        var isCollapsed = grid.classList.toggle('video-grid--collapsed');
+        btn.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
+        btn.textContent = isCollapsed ? 'Vis alle 11 videoer ↓' : 'Skjul videoer ↑';
+      });
+
+      initMobileCollapse();
+      window.addEventListener('resize', initMobileCollapse);
+    })();
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
@@ -567,6 +641,13 @@
         lat: 55.812,
         lng: 12.362,
         url: 'blog/farum-trevang.html'
+      },
+      {
+        name: 'Smøl',
+        description: 'Smøl på Broagerland, Sønderborg Kommune – lokal beredskabsplan med konkrete råd til dage uden strøm.',
+        lat: 54.899,
+        lng: 9.677,
+        url: 'blog/smoel-broager.html'
       }
     ];
 
@@ -593,6 +674,19 @@
         if (marker.getElement()) {
           marker.getElement().style.cursor = 'pointer';
         }
+      });
+    });
+  </script>
+  <script>
+    document.querySelector('.burger').addEventListener('click', function() {
+      var header = document.querySelector('header');
+      var open = header.classList.toggle('nav-open');
+      this.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('nav a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.querySelector('header').classList.remove('nav-open');
+        document.querySelector('.burger').setAttribute('aria-expanded', 'false');
       });
     });
   </script>

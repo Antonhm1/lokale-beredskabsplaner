@@ -707,6 +707,10 @@ nav a.active {
   color: #444;
 }
 
+.video-toggle-btn {
+  display: none;
+}
+
 .pdf-link {
   display: inline-block;
   margin-top: 10px;
@@ -1108,6 +1112,139 @@ nav a.active {
   background: #0C2752;
 }
 
+/* ── Klimaatlas / Ekstremvejr section ── */
+
+.klimaatlas-section {
+  background: #0d3a2e;
+  padding: 80px 40px;
+}
+
+.klimaatlas-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.klimaatlas-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #5ecfa0;
+  margin-bottom: 12px;
+}
+
+.klimaatlas-section h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.klimaatlas-intro {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 52px;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.klimaatlas-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: start;
+}
+
+.klimaatlas-video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.35);
+}
+
+.klimaatlas-text h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #5ecfa0;
+  margin-bottom: 16px;
+}
+
+.klimaatlas-text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 18px;
+}
+
+.klimaatlas-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.klimaatlas-list li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.82);
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.klimaatlas-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #5ecfa0;
+  font-weight: 900;
+}
+
+.klimaatlas-list li strong {
+  color: #fff;
+}
+
+.klimaatlas-cta {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #5ecfa0;
+  text-decoration: none;
+  border-bottom: 2px solid #5ecfa0;
+  padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.klimaatlas-cta:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 900px) {
+  .klimaatlas-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .klimaatlas-section {
+    padding: 48px 20px;
+  }
+
+  .klimaatlas-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .klimaatlas-intro {
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+}
+
 /* ── Om-section ── */
 
 .om-section {
@@ -1148,6 +1285,13 @@ nav a.active {
   object-fit: cover;
   object-position: center 80%;
   display: block;
+}
+
+.om-text h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #222;
 }
 
 .om-text p {
@@ -1253,12 +1397,81 @@ nav a.active {
   }
 }
 
+/* ── Burger menu button (hidden on desktop) ── */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+
+.burger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #0C2752;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+header.nav-open .burger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+header.nav-open .burger span:nth-child(2) {
+  opacity: 0;
+}
+
+header.nav-open .burger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /* ── Mobile ── */
 
 @media (max-width: 640px) {
   header {
     padding: 16px 20px;
     align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    background: #fff;
+    border-top: 2px solid #0C2752;
+    padding: 12px 0;
+  }
+
+  header.nav-open nav {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  nav a:hover,
+  nav a.active {
+    padding: 8px 18px;
   }
 
   .logo img {
@@ -1267,15 +1480,6 @@ nav a.active {
 
   .logo-text {
     font-size: 1.1rem;
-  }
-
-  nav {
-    gap: 6px;
-  }
-
-  nav a {
-    font-size: 0.75rem;
-    padding: 2px 5px;
   }
 
   .hero-image {
@@ -1468,6 +1672,33 @@ nav a.active {
   .video-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .video-grid--collapsed {
+    display: none;
+  }
+
+  .video-toggle-btn {
+    display: block;
+    margin: 0 auto 24px;
+    padding: 12px 24px;
+    background: #0C2752;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.15s ease;
+  }
+
+  .video-toggle-btn:hover {
+    background: #E87722;
+  }
+
+  .video-toggle-btn[aria-expanded="true"] {
+    margin-bottom: 24px;
   }
 
   .video-title {
