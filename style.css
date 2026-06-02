@@ -287,6 +287,18 @@ nav a.active {
   color: #fff;
 }
 
+.course-hero-btn--slides {
+  background: #0C2752;
+  color: #fff;
+  border-color: #0C2752;
+}
+
+.course-hero-btn--slides:hover {
+  background: #081c3a;
+  border-color: #081c3a;
+  color: #fff;
+}
+
 /* ── Description section ── */
 
 .event-description {
