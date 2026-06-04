@@ -299,6 +299,12 @@ nav a.active {
   color: #fff;
 }
 
+.course-hero-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* ── Description section ── */
 
 .event-description {
