@@ -212,6 +212,7 @@ nav a.active {
   gap: 24px;
   max-width: 1080px;
   margin: 0 auto;
+  align-items: start;
 }
 
 .course-hero-card {
