@@ -476,22 +476,50 @@ nav a.active {
 }
 
 .udv-btn--disabled {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  background: transparent;
   color: rgba(255, 255, 255, 0.45);
-  border: 3px solid rgba(255, 255, 255, 0.18);
+  border: 3px solid rgba(255, 255, 255, 0.2);
   font-size: 1rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 14px 24px;
+  padding: 12px 28px;
   cursor: default;
+}
+
+.udv-btn--disabled small {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  margin-top: 3px;
+}
+
+/* Hvid download-knap der popper på den mørke baggrund */
+.udv-btn--download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #0C2752;
+  border-color: #fff;
+}
+
+.udv-btn--download:hover {
+  background: transparent;
+  color: #fff;
 }
 
 .udv-cta-group {
   display: flex;
   gap: 16px;
   justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
   margin-bottom: 32px;
 }
