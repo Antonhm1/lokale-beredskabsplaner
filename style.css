@@ -413,6 +413,12 @@ nav a.active {
   margin: 0;
 }
 
+/* Skub download-knap(per) til bunden, så kortene flugter uanset antal knapper */
+.slides-card > a,
+.slides-card > .course-hero-btn-group {
+  margin-top: auto;
+}
+
 /* ── Udviklingsforløb section ── */
 
 .udv-section {
@@ -453,7 +459,7 @@ nav a.active {
 
 .udv-meta {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 52px;
 }
 
@@ -491,21 +497,6 @@ nav a.active {
   margin-top: 3px;
 }
 
-/* Hvid download-knap der popper på den mørke baggrund */
-.udv-btn--download {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  color: #0C2752;
-  border-color: #fff;
-}
-
-.udv-btn--download:hover {
-  background: transparent;
-  color: #fff;
-}
-
 .udv-cta-group {
   display: flex;
   gap: 16px;
@@ -517,12 +508,12 @@ nav a.active {
 
 .udv-footnote {
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.72);
   line-height: 1.6;
 }
 
 .udv-footnote a {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.88);
   text-decoration: underline;
 }
 
@@ -993,6 +984,22 @@ nav a.active {
   display: block;
   background: #e8e8e8;
 }
+
+/* Brandede placeholder-thumbnails til skrevne lokalsamfunds-cases (uden video) */
+.video-thumb--ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.video-thumb--ph svg {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
+
+.video-thumb--ph-1 { background: linear-gradient(135deg, #0C2752 0%, #0d3a2e 100%); }
+.video-thumb--ph-2 { background: linear-gradient(135deg, #0C2752 0%, #1d4a86 100%); }
+.video-thumb--ph-3 { background: linear-gradient(135deg, #13325f 0%, #8a4f1f 100%); }
 
 .video-title {
   font-size: 1.05rem;
