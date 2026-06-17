@@ -458,6 +458,7 @@ nav a.active {
 }
 
 .udv-bullets {
+  text-align: left;
   margin-bottom: 56px;
 }
 
@@ -468,6 +469,10 @@ nav a.active {
 .udv-program-grid {
   text-align: left;
   margin-bottom: 48px;
+}
+
+.udv-program-grid .program-card p {
+  color: #444;
 }
 
 .udv-btn--disabled {
