@@ -306,6 +306,113 @@ nav a.active {
   gap: 10px;
 }
 
+/* ── Webinar 2-column grid modifier ── */
+
+.course-hero-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 720px;
+}
+
+/* ── Webinar bullets & notes ── */
+
+.webinar-bullets {
+  list-style: none;
+  padding: 0;
+  max-width: 720px;
+  margin: 36px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.webinar-bullets li {
+  font-size: 1.05rem;
+  color: #333;
+  padding-left: 28px;
+  position: relative;
+}
+
+.webinar-bullets li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #E6883B;
+  font-weight: 900;
+}
+
+.webinar-note {
+  max-width: 720px;
+  margin: 20px auto 0;
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.webinar-note--secondary {
+  opacity: 0.7;
+  font-size: 0.88rem;
+}
+
+.webinar-note a {
+  color: #0C2752;
+  text-decoration: underline;
+}
+
+/* ── Slides archive section ── */
+
+.slides-section {
+  background: #f0ebe3;
+  padding: 64px 40px;
+}
+
+.slides-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slides-inner h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: #0C2752;
+  margin-bottom: 12px;
+}
+
+.slides-inner > p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.slides-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 32px auto 0;
+  max-width: 880px;
+}
+
+.slides-card {
+  background: #fff;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.slides-region {
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #0C2752;
+  margin: 0;
+}
+
 /* ── Description section ── */
 
 .event-description {
@@ -1435,6 +1542,10 @@ nav a.active {
     max-width: 520px;
   }
 
+  .slides-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .video-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1558,6 +1669,22 @@ header.nav-open .burger span:nth-child(3) {
     gap: 16px;
     max-width: 420px;
     margin: 0 auto;
+  }
+
+  .course-hero-grid--two {
+    max-width: 420px;
+  }
+
+  .slides-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slides-section {
+    padding: 48px 20px;
+  }
+
+  .webinar-bullets {
+    padding: 0 4px;
   }
 
   .course-hero-card {
