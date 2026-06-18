@@ -986,20 +986,37 @@ nav a.active {
 }
 
 /* Brandede placeholder-thumbnails til skrevne lokalsamfunds-cases (uden video) */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .video-thumb--ph {
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.9);
+  background-size: 300% 300%;
+  animation: gradient-shift 10s ease infinite;
 }
 
 .video-thumb--ph svg {
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+  opacity: 0.85;
+  width: 40px;
+  height: 40px;
 }
 
-.video-thumb--ph-1 { background: linear-gradient(135deg, #0C2752 0%, #0d3a2e 100%); }
-.video-thumb--ph-2 { background: linear-gradient(135deg, #0C2752 0%, #1d4a86 100%); }
-.video-thumb--ph-3 { background: linear-gradient(135deg, #13325f 0%, #8a4f1f 100%); }
+.video-thumb--ph-1 {
+  background-image: linear-gradient(135deg, #0C2752 0%, #0d4a3a 25%, #1a6b52 50%, #0d4a3a 75%, #0C2752 100%);
+}
+.video-thumb--ph-2 {
+  background-image: linear-gradient(135deg, #0C2752 0%, #1a3d7a 25%, #2458b0 50%, #1a3d7a 75%, #0C2752 100%);
+}
+.video-thumb--ph-3 {
+  background-image: linear-gradient(135deg, #13325f 0%, #7a3a12 25%, #b85c20 50%, #7a3a12 75%, #13325f 100%);
+}
 
 .video-title {
   font-size: 1.05rem;
