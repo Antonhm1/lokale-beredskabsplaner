@@ -901,9 +901,13 @@ nav a.active {
 /* ── Video section ── */
 
 .video-section {
+  background: #0C2752;
+  padding: 80px 40px;
+}
+
+.video-section-inner {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 80px 40px;
 }
 
 .video-section h2 {
@@ -912,7 +916,7 @@ nav a.active {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 16px;
-  color: #0C2752;
+  color: #fff;
 }
 
 .video-intro {
@@ -921,7 +925,7 @@ nav a.active {
   margin: 0 auto 48px;
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #444;
+  color: #d8e0ee;
 }
 
 .video-toggle-btn {
@@ -931,7 +935,7 @@ nav a.active {
 .pdf-link {
   display: inline-block;
   margin-top: 10px;
-  color: #0C2752;
+  color: #fff;
   font-weight: 600;
   text-decoration: underline;
   white-space: nowrap;
@@ -1980,7 +1984,7 @@ header.nav-open .burger span:nth-child(3) {
     display: block;
     margin: 0 auto 24px;
     padding: 12px 24px;
-    background: #0C2752;
+    background: #E6883B;
     color: #fff;
     border: none;
     border-radius: 8px;
