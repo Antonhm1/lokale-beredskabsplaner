@@ -1211,6 +1211,11 @@ nav a.active {
   display: block;
 }
 
+/* Tone down the colourful OSM tiles to a light, muted basemap */
+#denmark-map .leaflet-tile-pane {
+  filter: grayscale(1) brightness(1.08) contrast(0.85);
+}
+
 .village-tooltip {
   background: #0C2752 !important;
   color: #fff !important;
