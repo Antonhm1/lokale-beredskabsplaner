@@ -5,9 +5,11 @@
   var filename = path.split('/').pop() || '';
 
   var isKontakt = filename === 'kontakt.html';
+  var isSkabeloner = filename === 'skabeloner.html';
+  var isLinks = filename === 'links.html';
   var isVideo = /^video-/.test(filename);
   var isPlan = isInBlog && !isVideo;
-  var isIndex = !isKontakt && !isInBlog;
+  var isIndex = !isKontakt && !isSkabeloner && !isLinks && !isInBlog;
 
   function a(cond) { return cond ? ' class="active"' : ''; }
 
@@ -25,8 +27,9 @@
     '<nav>' +
       '<a href="' + prefix + 'index.html"' + a(isIndex) + '>Hjem</a>' +
       '<a href="' + prefix + 'index.html#beredskabsplaner"' + a(isPlan) + '>Planer</a>' +
+      '<a href="' + prefix + 'skabeloner.html"' + a(isSkabeloner) + '>Skabeloner</a>' +
       '<a href="' + prefix + 'index.html#videoer"' + a(isVideo) + '>Videoer</a>' +
-      '<a href="' + prefix + 'index.html#ekstremvejr">Ekstremvejr</a>' +
+      '<a href="' + prefix + 'links.html"' + a(isLinks) + '>Links</a>' +
       '<a href="' + prefix + 'index.html#om">Om</a>' +
       '<a href="' + prefix + 'kontakt.html"' + a(isKontakt) + '>Kontakt</a>' +
     '</nav>';
@@ -49,7 +52,7 @@
 
   // Scroll-driven active state on index.html
   var navLinks = Array.from(headerEl.querySelectorAll('nav a'));
-  var sectionIds = ['beredskabsplaner', 'videoer', 'ekstremvejr', 'om'];
+  var sectionIds = ['beredskabsplaner', 'videoer', 'om'];
 
   function setActive(hash) {
     navLinks.forEach(function (link) {

@@ -1371,6 +1371,58 @@ nav a.active {
   background: #0C2752;
 }
 
+/* ── Skabeloner page ── */
+
+.skabelon-intro,
+.skabelon-help {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.skabelon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.skabelon-card {
+  background: #f2f2f2;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skabelon-card h2 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #0C2752;
+  margin-bottom: 12px;
+}
+
+.skabelon-card p {
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.skabelon-card .skabelon-note {
+  font-size: 0.9rem;
+  margin: 16px 0 0;
+  flex-grow: 0;
+}
+
+.drejebog-templates-link {
+  display: block;
+  margin-top: 20px;
+  color: #0C2752;
+  font-weight: 700;
+}
+
 /* ── Klimaatlas / Ekstremvejr section ── */
 
 .klimaatlas-section {
@@ -2118,4 +2170,21 @@ header.nav-open .burger span:nth-child(3) {
 @media (max-width: 600px) {
   .lb-prev { left: 8px; padding: 8px 14px; font-size: 2rem; }
   .lb-next { right: 8px; padding: 8px 14px; font-size: 2rem; }
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 36px;
+}
+
+.link-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 1.5;
+  color: #444;
+}
+
+.link-list a {
+  font-weight: 600;
 }
