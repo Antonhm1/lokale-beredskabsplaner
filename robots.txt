@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /login.html
 
 Sitemap: https://lokalt-beredskab.dk/sitemap.xml

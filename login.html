@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Log ind – Lokalt Beredskab</title>
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header></header>
+  <script src="header.js"></script>
+
+  <main class="login-page">
+    <h1>Log ind som redaktør</h1>
+    <p>Når du er logget ind, kan du klikke på teksterne på siden og rette dem. Tryk <strong>Gem ændringer</strong> nederst – så er siden opdateret på nettet efter ca. 1 minut.</p>
+
+    <form id="login-form" class="login-form">
+      <label for="token">Adgangsnøgle (GitHub-token)</label>
+      <input id="token" type="password" autocomplete="current-password" required placeholder="github_pat_…">
+      <button type="submit">Log ind</button>
+      <p id="login-status" class="login-status" aria-live="polite"></p>
+    </form>
+
+    <details class="login-help">
+      <summary>Sådan laver du en adgangsnøgle (kun for administrator)</summary>
+      <ol>
+        <li>Gå til GitHub → Settings → Developer settings → Personal access tokens → <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Fine-grained tokens</a>.</li>
+        <li>Repository access: <em>Only select repositories</em> → <code>lokale-beredskabsplaner</code>.</li>
+        <li>Permissions → Repository permissions → <em>Contents: Read and write</em>.</li>
+        <li>Vælg udløbsdato (fx 1 år), opret og giv nøglen til redaktøren.</li>
+      </ol>
+    </details>
+  </main>
+
+  <script>
+    (function () {
+      var REPO = 'Antonhm1/lokale-beredskabsplaner';
+      var form = document.getElementById('login-form');
+      var input = document.getElementById('token');
+      var status = document.getElementById('login-status');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var token = input.value.trim();
+        status.textContent = 'Tjekker …';
+        fetch('https://api.github.com/repos/' + REPO, {
+          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
+          cache: 'no-store'
+        }).then(function (res) {
+          if (!res.ok) throw new Error(res.status);
+          try { localStorage.setItem('lb-edit-token', token); } catch (err) {
+            throw new Error('browseren tillader ikke at gemme login');
+          }
+          status.textContent = 'Du er logget ind. Sender dig videre …';
+          location.href = 'index.html';
+        }).catch(function (err) {
+          status.textContent = 'Login mislykkedes (' + err.message + '). Tjek at nøglen er rigtig og ikke er udløbet.';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
